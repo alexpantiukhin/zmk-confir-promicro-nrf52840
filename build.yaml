@@ -14,10 +14,10 @@
 
 ---
 include:
-  - board: nrf52840_m2
+  - board: nice_nano_v2
     shield: DM_6x5_left
-  - board: nrf52840_m2
+  - board: nice_nano_v2
     shield: DM_6x5_right
-  - board: nrf52840_m2
+  - board: nice_nano_v2
     shield: settings_reset
     
