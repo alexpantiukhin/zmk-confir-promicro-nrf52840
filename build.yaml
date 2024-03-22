@@ -15,9 +15,9 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: Dactyl_manuform_6x5_left
+    shield: DM_6x5_left
   - board: nice_nano_v2
-    shield: Dactyl_manuform_6x5_right
+    shield: DM_6x5_right
   - board: nice_nano_v2
     shield: settings_reset
     

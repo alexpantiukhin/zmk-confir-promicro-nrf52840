@@ -1,6 +1,6 @@
-// Dactyl_manuform_6x5_right.overlay
+// DM_6x5_right.overlay
 
-#include "Dactyl_manuform_6x5.dtsi"
+#include "DM_6x5.dtsi"
 
 &default_transform {
     col-offset = <6>;
