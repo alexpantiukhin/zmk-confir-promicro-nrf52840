@@ -1,0 +1,8 @@
+file_format: "1"
+id: Dactyl_manuform_6x5
+Name: Dactyl_manuform_6x5
+type: shield
+url: https://github.com/alexpantiukhin/zmk-confir-promicro-nrf52840/
+requires: [nice_nano_v2]
+features:
+  - keys
