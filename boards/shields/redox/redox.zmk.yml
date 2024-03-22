@@ -1,0 +1,8 @@
+file_format: "1"
+id: redox
+Name: redox
+type: shield
+url: https://github.com/alexpantiukhin/zmk-confir-promicro-nrf52840/
+requires: [nice_nano_v2]
+features:
+  - keys
