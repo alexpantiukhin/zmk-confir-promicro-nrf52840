@@ -22,12 +22,52 @@
 // | SHIFT |  Z  |  X  |   C   |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  N    |  M    |  ,    |  .   | /  | SHFT(RET) |
 // | CRTL  | ALT | GUI | LOWER |    GUI    | LOWER | SPACE   | --- | DEL  | SPACE |     RAISE     | LEFT  | DOWN | UP |   RIGHT   |
             bindings = <
-   &kp ESC  &kp N1   &kp N2   &kp N3 &kp N4 &kp N5  &kp U &kp N6      &kp N7      &kp N8 &kp N9   &kp K
-   &kp A    &kp Q    &kp W    &kp E  &kp R  &kp T   &kp J &kp RPAR     &kp Y       &kp U  &kp I    &kp L
-   &kp B    &kp A    &kp S    &kp D  &kp F  &kp G   &kp M &kp RBKT    &kp H       &kp J  &kp K    &kp J
-   &kp C    &kp Z    &kp X    &kp C  &kp V  &kp B   &kp K &kp HOME    &kp END     &kp N  &kp M    &kp D
-   &kp D    &kp LALT &kp LGUI &mo 3  &kp D  &kp C   &kp O &kp DEL     &kp SPACE   &mo 2  &kp O    &kp S
+&kp ESC  &kp W        &kp E       &kp R      &kp T        &kp Y      &kp U       &kp I             &kp O              &kp INS
+&kp Q    &kp S        &kp D       &kp F      &kp G        &kp H      &kp J       &kp K             &kp L              &kp P
+&kp A    &kp X        &kp C       &kp V      &kp B        &kp N      &kp M       &kp COMMA         &kp PERIOD         &kp SEMICOLON
+&kp Z    &kp GRAVE    &kp SQT     &kp LCTRL  &kp SPACE    &kp ENTER  &kp RSHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH
+&none    &bt BT_CLR   &bt BT_NXT  &mo 1      &kp TAB      &kp LALT   &mo 2       &none             &none              &kp B
+&none    &out OUT_TOG &none       &kp DEL    &kp LSHFT    &kp RCTRL  &kp BSPC    &kp A             &kp C              &kp D
             >;
+        };
+
+        
+        lower_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            bindings = <
+&kp LS(LG(S))  &bootloader      &sys_reset            &none         &none           &none         &none         &none   &none       &none
+&bootloader    &trans           &kp NON_US_BACKSLASH  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &none   &none       &kp KP_DIVIDE
+&kp N7         &kp N8           &kp N9                &kp MINUS     &none           &bt BT_SEL 4  &none         &none   &none       &trans
+&trans         &kp KP_MULTIPLY  &kp NUMBER_4          &kp N5        &kp NUMBER_6    &kp KP_PLUS   &none         &none   &none       &none
+&none          &trans           &trans                &kp EQUAL     &kp N1          &kp N2        &kp N3        &none   &none       &kp K_APP
+&none          &trans           &trans                &trans        &trans          &trans        &trans        &kp N0  &kp KP_DOT  &none
+            >;
+        };
+
+        raise_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            bindings = <
+&kp F1         &none      &none           &none         &none              &none           &none         &none           &none        &sys_reset
+&bootloader    &kp F12    &kp F2          &kp F3        &kp F4             &kp F5          &kp F6        &none           &none        &kp F7
+&kp F8         &kp F9     &kp F10         &kp F11       &kp C_VOLUME_UP    &none           &none         &none           &kp PAGE_UP  &none
+&none          &kp HOME   &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp END         &kp C_VOL_DN  &kp C_PREVIOUS  &kp C_NEXT   &none
+&kp PAGE_DOWN  &none      &none           &none         &none              &kp DOWN_ARROW  &none         &kp LWIN        &none        &kp C_MUTE
+&kp C_AL_CALC  &kp SPACE  &kp LCTRL       &mo 1         &trans             &none           &none         &trans          &none        &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
