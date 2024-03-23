@@ -19,15 +19,15 @@
             // | CTRL  |  A  |  S  |   D   |  F  |  G  |   [   |           ---        |  ]    |  H    |  J    |  K    |  L   | ;  |     '     |
             // | SHIFT |  Z  |  X  |   C   |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  N    |  M    |  ,    |  .   | /  | SHFT(RET) |
             // | CRTL  | ALT | GUI | LOWER |    GUI    | LOWER | SPACE   | --- | DEL  | SPACE |     RAISE     | LEFT  | DOWN | UP |   RIGHT   |
+            //  серый    белый      черный   корич  крас   
 
-//  серый    белый      черный   корич  крас   
             bindings = <
-    &kp ESC  &kp W      &kp E    &kp R  &kp T  &kp Y      &kp U       &kp I             &kp O              &kp INS              //фиол
-    &kp Q    &kp S      &kp D    &kp F  &kp G  &kp H      &kp J       &kp K             &kp L              &kp P                //синий
-    &kp A    &kp X      &kp C    &kp V  &kp B  &kp N      &kp M       &kp COMMA         &kp PERIOD         &kp SEMICOLON        //зеленый
-    &kp Z    &kp GRAVE  &kp SQT  &kp Y  &kp B  &kp ENTER  &kp RSHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH            //желтый
-    &kp F    &kp B      &kp C    &kp Z  &kp A  &kp LALT   &mo 2       &none             &none              &kp B                //оранж
-    &kp G    &kp D      &kp E    &kp D  &kp C  &kp RCTRL  &kp BSPC    &kp A             &kp C              &kp D                //красный
+&kp ESC  &kp W      &kp E    &kp R  &kp T  &kp Y      &kp U       &kp I             &kp O              &kp INS
+&kp Q    &kp S      &kp D    &kp F  &kp G  &kp H      &kp J       &kp K             &kp L              &kp P
+&kp A    &kp X      &kp C    &kp V  &kp B  &kp N      &kp M       &kp COMMA         &kp PERIOD         &kp SEMICOLON
+&kp Z    &kp GRAVE  &kp SQT  &kp Y  &kp B  &kp ENTER  &kp RSHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH
+&kp F    &kp B      &kp C    &kp Z  &kp A  &kp LALT   &mo 2       &none             &none              &kp B
+&kp G    &kp D      &kp H    &kp D  &kp C  &kp RCTRL  &kp BSPC    &kp A             &kp C              &kp D
             >;
         };
 
